@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amisha's Arts & Crafts Store</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="https://placehold.co/32x32/000/ffffff?text=A">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+     <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Amisha's Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                   <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#products-section"><i class="fas fa-box-open me-1"></i>Products</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html"><i class="fas fa-envelope me-1"></i>Terms & Conditions</a></li>
+                    <li class="nav-item">
+                        <button id="dark-mode-toggle" class="btn btn-link nav-link ms-2"><i class="fas fa-moon"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <section class="hero-section">
+    <div class="container text-center">
+      <h1 class="hero-title">About Us</h1>
+     
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="container my-5">
+    <h2 class="section-title text-center">Our Story</h2>
+    <p class="mt-3">
+      Welcome to <b>Amisha's Arts & Crafts Store</b>! We are passionate about bringing you hand-made, unique, and high-quality items at affordable prices. 
+      Our mission is simple – to create a seamless and enjoyable shopping experience for you.
+    </p>
+    <p>
+      Every product listed here is carefully curated and crafted with love. We started this journey with a vision to make online shopping 
+      easy, trustworthy, and personal. Your satisfaction is our top priority.
+    </p>
+
+    <h2 class="section-title text-center mt-5">Why Choose Us?</h2>
+    <ul class="mt-3" style="line-height:1.8;">
+      <li>✔ Hand-made with love and care</li>
+      <li>✔ Wide range of quality crafts</li>
+      <li>✔ Secure and hassle-free shopping</li>
+      <li>✔ Personalized customer support</li>
+      <li>✔ Affordable pricing and offers</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Amisha's Arts & Crafts Store</h5>
+          <p>Your one-stop shop for unique and amazing finds. Hand-made items with love and care.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <a href="https://instagram.com/i_am_amisha19_/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-0">Made with <span class="heart">❤️</span> In India by <a href="https://instagram.com/shiveshsatyam_/" target="_blank">S. Satyam</a></p>
+    </div>
+  </footer>
+   
+    
+    
+      <script>
+    const toggleBtn = document.getElementById("dark-mode-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const icon = toggleBtn.querySelector("i");
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.replace("fa-moon", "fa-sun");
+      } else {
+        icon.classList.replace("fa-sun", "fa-moon");
+      }
+    });
+  </script>
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
