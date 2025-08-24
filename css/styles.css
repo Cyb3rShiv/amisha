@@ -1,0 +1,253 @@
+/* === Base Styles === */
+:root {
+  --primary-color: #2c3e50;      /* Midnight Blue */
+  --secondary-color: #3498db;    /* Peter River Blue */
+  --accent-color: #e74c3c;       /* Alizarin Red */
+  --light-bg: #ecf0f1;           /* Clouds White */
+  --text-dark: #34495e;          /* Wet Asphalt */
+  --text-light: #ffffff;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+/* === Navigation Bar === */
+.navbar {
+  transition: var(--transition);
+}
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--primary-color) !important;
+}
+.nav-link {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--secondary-color) !important;
+}
+
+/* === Hero Section === */
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+    padding: 120px 0;
+    color: var(--text-light);
+}
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+.hero-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+.hero-btn:hover {
+    background-color: #2980b9; /* Darker blue */
+    transform: translateY(-3px);
+}
+
+/* === Section Title === */
+.section-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+
+/* === Product Card Design === */
+.product-card {
+  background: var(--text-light);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.product-image-container {
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative;
+}
+.product-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-info {
+    padding: 1.5rem;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.product-info h2 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+.product-info .item-no {
+    font-size: 0.9rem;
+    color: #7f8c8d; /* Asbestos */
+    margin-bottom: 1rem;
+}
+.product-info .price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.buy-btn {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto; /* Pushes button to the bottom */
+  font-weight: 500;
+}
+.buy-btn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* === Load More Button === */
+#load-more-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+/* === Dark Mode === */
+body.dark-mode {
+  background-color: #222f3e;
+  color: var(--light-bg);
+}
+.dark-mode .navbar {
+    background-color: #1a222b !important;
+}
+.dark-mode .navbar-brand, .dark-mode .nav-link, .dark-mode #dark-mode-toggle {
+    color: var(--light-bg) !important;
+}
+.dark-mode .section-title, .dark-mode .product-info h2, .dark-mode .product-info .price {
+    color: var(--light-bg);
+}
+.dark-mode .product-card {
+  background: #2c3e50;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.dark-mode .product-info .item-no {
+    color: #bdc3c7; /* Silver */
+}
+.dark-mode footer {
+    background-color: #1a222b;
+}
+
+/* === Footer === */
+footer {
+  background: var(--primary-color);
+  color: var(--light-bg);
+  padding: 3rem 0;
+  margin-top: auto;
+}
+footer h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+footer a {
+    color: var(--light-bg);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+footer a:hover {
+    color: var(--secondary-color);
+}
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+.heart {
+  color: var(--accent-color);
+  animation: heartbeat 1.5s infinite;
+}
+
+/* === Animations === */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* === Responsive Design === */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-section {
+        padding: 80px 0;
+    }
+    footer {
+        text-align: center;
+    }
+}
